@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Revolut Customer Support</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background: #f7f9fc;
+    color: #202124;
+  }
+  header {
+    background: #3a76f0;
+    color: white;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.8rem;
+  }
+  main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  h2 {
+    color: #3a76f0;
+    margin-bottom: 1rem;
+  }
+  details {
+    background: white;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 2px 5px rgb(0 0 0 / 0.05);
+    cursor: pointer;
+  }
+  details summary {
+    font-weight: 600;
+    font-size: 1.1rem;
+    outline: none;
+  }
+  details[open] summary::after {
+    content: "▲";
+    float: right;
+  }
+  details summary::after {
+    content: "▼";
+    float: right;
+  }
+  form {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+    margin-top: 2rem;
+  }
+  label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+  }
+  input, textarea {
+    width: 100%;
+    padding: 0.6rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    border: 1.5px solid #ccc;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  input:focus, textarea:focus {
+    border-color: #3a76f0;
+    outline: none;
+  }
+  button {
+    background: #3a76f0;
+    border: none;
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+  }
+  button:hover {
+    background: #2e5bd8;
+  }
+  #chat-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 320px;
+    max-height: 400px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgb(0 0 0 / 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-size: 14px;
+  }
+  #chat-header {
+    background: #3a76f0;
+    color: white;
+    padding: 0.8rem 1rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #chat-messages {
+    flex-grow: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    background: #f0f4ff;
+  }
+  .chat-message {
+    margin-bottom: 0.8rem;
+    padding: 0.5rem 0.8rem;
+    border-radius: 12px;
+    max-width: 75%;
+    line-height: 1.3;
+  }
+  .chat-message.customer {
+    background: #3a76f0;
+    color: white;
+    align-self: flex-end;
+  }
+  .chat-message.support {
+    background: #e2e7ff;
+    color: #202124;
+    align-self: flex-start;
+  }
+  #chat-input-area {
+    display: flex;
+    border-top: 1px solid #ddd;
+  }
+  #chat-input {
+    flex-grow: 1;
+    border: none;
+    padding: 0.8rem 1rem;
+    font-size: 14px;
+  }
+  #chat-send {
+    background: #3a76f0;
+    color: white;
+    border: none;
+    padding: 0 1.2rem;
+    cursor: pointer;
+    font-weight: 700;
+  }
+  #chat-send:disabled {
+    background: #a0b8f9;
+    cursor: not-allowed;
+  }
+  @media (max-width: 480px) {
+    #chat-widget {
+      width: 100%;
+      bottom: 0;
+      right: 0;
+      border-radius: 0;
+      max-height: 300px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  Revolut Customer Support
+</header>
+
+<main>
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+      <summary>How do I reset my Revolut card PIN?</summary>
+      <p>You can reset your card PIN directly in the Revolut app under "Cards" &gt; select your card &gt; "Change PIN".</p>
+    </details>
+    <details>
+      <summary>How to report a lost or stolen card?</summary>
+      <p>Use the Revolut app to instantly freeze your card and request a replacement under the "Cards" section.</p>
+    </details>
+    <details>
+      <summary>What should I do if my transaction is declined?</summary>
+      <p>Ensure you have sufficient funds, check if your card is active, and verify your transaction limits in the app.</p>
+    </details>
+    <details>
+      <summary>How do I contact customer support?</summary>
+      <p>You can chat with us here or reach out via email at support@revolut.com.</p>
+    </details>
+  </section>
+
+  <section>
+    <h2>Contact Support</h2>
+    <form id="contact-form" novalidate>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4" placeholder="Describe your issue" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+    <p id="form-status" style="color:green; font-weight:600; display:none; margin-top:0.5rem;"></p>
+  </section>
+</main>
+
+<!-- Chat widget -->
+<div id="chat-widget" aria-live="polite" aria-label="Customer Support Chat">
+  <div id="chat-header">
+    <span>Live Support</span>
+    <button aria-label="Close chat" id="chat-close">&times;</button>
+  </div>
+  <div id="chat-messages" role="log" aria-live="polite" aria-relevant="additions"></div>
+  <form id="chat-form">
+    <input id="chat-input" autocomplete="off" placeholder="Type your message..." aria-label="Chat input" />
+    <button id="chat-send" disabled>Send</button>
+  </form>
+</div>
+
+<script>
+  // Contact form submission simulation
+  const contactForm = document.getElementById('contact-form');
+  const formStatus = document.getElementById('form-status');
+
+  contactForm.addEventListener('submit', e => {
+    e.preventDefault();
+    if (!contactForm.checkValidity()) {
+      contactForm.reportValidity();
+      return;
+    }
+    formStatus.textContent = "Sending message...";
+    setTimeout(() => {
+      formStatus.textContent = "Message sent! Our support team will contact you shortly.";
+      contactForm.reset();
+    }, 1500);
+  });
+
+  // Chat widget logic
+  const chatWidget = document.getElementById('chat-widget');
+  const chatMessages = document.getElementById('chat-messages');
+  const chatInput = document.getElementById('chat-input');
+  const chatSend = document.getElementById('chat-send');
+  const chatClose = document.getElementById('chat-close');
+
+  chatInput.addEventListener('input', () => {
+    chatSend.disabled = chatInput.value.trim() === '';
+  });
+
+  chatClose.addEventListener('click', () => {
+    chatWidget.style.display = 'none';
+  });
+
+  function addChatMessage(text, sender) {
+    const msgDiv = document.createElement('div');
+    msgDiv.classList.add('chat-message', sender);
+    msgDiv.textContent = text;
+    chatMessages.appendChild(msgDiv);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
+
+  document.getElementById('chat-form').addEventListener('submit', e => {
+    e.preventDefault();
+    const userMsg = chatInput.value.trim();
+    if (!userMsg) return;
+    addChatMessage(userMsg, 'customer');
+    chatInput.value = '';
+    chatSend.disabled = true;
+
+    // Simulate support reply after delay
+    setTimeout(() => {
+      addChatMessage("Thanks for reaching out! A support agent will be with you shortly.", 'support');
+    }, 1200);
+  });
+</script>
+
+</body>
+</html>
